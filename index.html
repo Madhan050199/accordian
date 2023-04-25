@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>accordian</title>
+</head>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+*{
+padding:0;
+margin:0;
+box-sizing:border-box;
+}
+
+
+.nav_bar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+width:900px;
+height:50px;
+background-color:#EEEEEE;
+border-radius:5px;
+}
+.nav_bar:hover{
+background-color:#CCCCCC;
+transition:0.5s;
+}
+
+.icon{
+margin-right:10px;
+transition:0.5s;
+transform:rotateZ(180deg);
+}
+
+.nav_bar:hover .icon{
+transform:rotateZ(0deg);
+
+}
+.content{
+width:900px;
+padding:10px;
+border:1px solid #B9B6B6;
+transition:1s;
+transform-origin:top;
+background-color:white;
+display:none;
+}
+.main_container_1:hover .content{
+display:block;
+}
+
+
+
+.main_container:hover .icon{
+transform:rotateZ(180deg);
+transition:0.5s;
+}
+.main_container_2{
+width:800px;
+height:180px;
+
+}
+.nav_bar_2{
+width:100%;
+height:50px;
+background-color:#EEEEEE;
+display:flex;
+border:1px solid #B9B6B6;
+
+}
+.nav_bar_2 a{
+display:inline-block;
+text-decoration:none;
+font-size:18px;
+color:black;
+padding:13px;
+font-family:sans-serif;
+}
+.nav_bar_2 a:hover{
+color:white;
+background-color:#D2D2D2;
+}
+.heading{
+font-family:sans-serif;
+margin-top:10px;
+padding:10px;
+width:500px;
+}
+.heading-1{
+font-family:sans-serif;
+margin-top:10px;
+padding:10px;
+width:500px;
+}
+.heading-2{
+font-family:sans-serif;
+margin-top:10px;
+padding:10px;
+width:500px;
+}
+.heading-2 p{
+padding-top:30px;
+}
+.heading-1 p{
+padding-top:30px;
+}
+.heading p{
+padding-top:30px;
+}
+.flex-container_2{
+display:flex;
+justify-content:center;
+align-items:center;
+width:900px;
+height:300px;
+box-shadow:0px 0px 10px #F3F3F3;
+border-radius:5px;
+}
+.main_container_3{
+width:800px;
+height:300px;
+border:1px solid;
+display:flex;
+flex-direction:row-reverse;
+justify-content:start;
+border:1px solid #FA545C;
+}
+.sub_container{
+width:280px;
+height:400px;
+background-color:#CAC5C5;
+display:flex;
+flex-direction:column;
+border:1px solid gray;
+}
+
+.sub_container a{
+display:inline-block;
+text-decoration:none;
+color:black;
+font-family:sans-serif;
+width:280px;
+padding:15px 20px;
+font-size:20px;
+}
+.sub_container a:hover{
+color:white;
+background-color:#D2D2D2;
+}
+
+.flex .heading_2{
+margin-bottom:10px;
+}
+.flex-container_3{
+display:flex;
+justify-content:center;
+align-items:center;
+width:900px;
+height:400px;
+border-radius:5px;
+box-shadow:0px 0px 10px #F3F3F3;
+}
+.main{
+height:100%;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+gap:50px;
+}
+.heading{
+position:absolute;
+transform-origin:top;
+width:800px;
+background-color:#C3BCBC;
+transform:rotateX(90deg);
+top:40px;
+}
+.heading-1{
+position:absolute;
+left:0;
+top:40px;
+transform-origin:top;
+width:800px;
+background-color:#C3BCBC;
+transform:rotateX(90deg);
+}
+.heading-2{
+position:absolute;
+left:0;
+top:40px;
+transform-origin:top;
+width:800px;
+background-color:#C3BCBC;
+transform:rotateX(90deg);
+}
+
+.list{
+display:flex;
+list-style-type:none;
+position:relative;
+}
+.list li:nth-child(1):hover  .heading{
+transform:rotateX(0deg);
+transition:1s;
+}
+.list li:nth-child(2):hover  .heading-1{
+transform:rotateX(0deg);
+transition:1s;
+}
+.list li:nth-child(3):hover  .heading-2{
+transform:rotateX(0deg);
+transition:1s;
+}
+
+.list-2{
+list-style-type:none;
+}
+.sub_container{
+position:relative;
+
+}
+.main_content{
+width:500px;
+height:400px;
+background-color:#F2EEEE;
+font-family:sans-serif;
+position:absolute;
+left:278px;
+top:0;
+padding:15px;
+transform:rotateY(90deg);
+transition:0.5s;
+transform-origin:left;
+border:1px solid #B0ADAD;
+
+
+}
+.list-2 li:nth-child(1):hover .main_content{
+transition:1s;
+transform:rotateY(0deg);
+}
+.list-2 li:nth-child(2):hover .main_content_2{
+transition:1s;
+transform:rotateY(0deg);
+}
+.list-2 li:nth-child(3):hover .main_content_3{
+transition:1s;
+transform:rotateY(0deg);
+}
+.content_3{
+margin-top:10px;
+}
+
+.main_content_2{
+width:500px;
+height:400px;
+background-color:#F2EEEE;
+font-family:sans-serif;
+position:absolute;
+left:278px;
+top:0;
+padding:15px;
+border:1px solid #B0ADAD;
+transform:rotateY(90deg);
+transition:0.5s;
+transform-origin:left;
+
+}
+.main_content_3{
+width:500px;
+height:400px;
+background-color:#F2EEEE;
+font-family:sans-serif;
+position:absolute;
+left:278px;
+top:0;
+padding:15px;
+transform:rotateY(90deg);
+transition:0.5s;
+transform-origin:left;
+border:1px solid #B0ADAD;
+
+}
+.section{
+padding:10px;
+font-weight:bold;
+}
+.flex-container{
+display:flex;
+flex-direction:column;
+height:100%;
+align-items:center;
+gap:30px;
+}
+
+.flex-box{
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+width:950px;
+height:400px;
+margin-top:20px;
+border-radius:5px;
+box-shadow:0px 0px 5px gray;
+}
+.flex-box-2{
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+width:950px;
+height:450px;
+box-shadow:0px 0px 5px gray;
+
+}
+.main{
+width:780px;
+display:flex;
+align-items:start;
+
+}
+</style>
+<body>
+
+<div class="flex-container">
+<div class="flex-box">
+<div class="main_container_1">
+<div class="nav_bar">
+<div class="section">
+Section-1
+</div>
+<div class="icon">
+<i class="fa-solid fa-caret-down"></i>
+</div>
+</div>
+<div class="content">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus, mauris aliquam porttitor condimentum, turpis libero fringilla ipsum, in sollicitudin orci elit id erat. Maecenas pretium dignissim dui, nec porttitor nibh posuere sit amet. Cras iaculis in lorem vel consectetur. Mauris convallis mi quis molestie scelerisque.</p>
+</div>
+</div>
+<div class="main_container_1">
+<div class="nav_bar">
+<div class="section">
+Section-1
+</div>
+<div class="icon">
+<i class="fa-solid fa-caret-down"></i>
+</div>
+</div>
+<div class="content">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus, mauris aliquam porttitor condimentum, turpis libero fringilla ipsum, in sollicitudin orci elit id erat. Maecenas pretium dignissim dui, nec porttitor nibh posuere sit amet. Cras iaculis in lorem vel consectetur. Mauris convallis mi quis molestie scelerisque.</p>
+</div>
+</div>
+<div class="main_container_1">
+<div class="nav_bar">
+<div class="section">
+Section-1
+</div>
+<div class="icon">
+<i class="fa-solid fa-caret-down"></i>
+</div>
+</div>
+<div class="content">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus, mauris aliquam porttitor condimentum, turpis libero fringilla ipsum, in sollicitudin orci elit id erat. Maecenas pretium dignissim dui, nec porttitor nibh posuere sit amet. Cras iaculis in lorem vel consectetur. Mauris convallis mi quis molestie scelerisque.</p>
+</div>
+</div>
+</div>
+<div class="flex-box">
+<div class="main_container_2">
+<div class="nav_bar_2">
+<ul class="list">
+<li><a href="#">London</a>
+<div class="heading">
+<h3>London</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+</div>
+</li>
+<li><a href="#">paris</a>
+<div class="heading-1">
+<h3>Paris</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+</div>
+</li>
+<li><a href="#">Tokyo</a>
+<div class="heading-2">
+<h3>Tokyo</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="flex-box-2">
+<div class="main">
+<div class="sub_container">
+<ul class="list-2">
+<li><a href="#">London</a>
+<div class="main_content">
+<div class="heading_4">
+<h3>London</h3>
+</div>
+<div class="content_3">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+</div></li>
+<li><a href="#">Paris</a>
+<div class="main_content_2">
+<div class="heading_5">
+<h3>Paris</h3>
+</div>
+<div class="content_3">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+</div>
+</li>
+<li><a href="#">Tokyo</a>
+<div class="main_content_3">
+<div class="heading_6">
+<h3>Tokyo </h3>
+</div>
+<div class="content_3">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</body>
